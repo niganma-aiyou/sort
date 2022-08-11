@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<configuration>
+    <contextName>logback</contextName>
+
+
+    <!--输出到控制台-->
+    <conversionRule conversionWord="clr" converterClass="org.springframework.boot.logging.logback.ColorConverter"/>
+    <appender name="outputConsole" class="ch.qos.logback.core.ConsoleAppender">
+        <filter class="ch.qos.logback.classic.filter.ThresholdFilter">
+            <level>info</level>
+        </filter>
+        <encoder>
+            <Pattern>%d %p [%t] %logger{0}---%clr(%m) %n</Pattern>
+            <charset>UTF-8</charset>
+        </encoder>
+    </appender>
+    <!-- 输出到指定文件 -->
+    <property name="logDictionary" value="D:/ssmlog"/>
+    <appender name="outputInfo" class="ch.qos.logback.core.rolling.RollingFileAppender">
+        <file>${logDictionary}/info.log</file>
+        <filter class="ch.qos.logback.classic.filter.LevelFilter">
+            <level>info</level>
+            <onMatch>ACCEPT</onMatch>
+            <onMismatch>DENY</onMismatch>
+        </filter>
+        <encoder>
+            <Pattern>%d %p [%t] %logger{0}---%m %n</Pattern>
+            <charset>UTF-8</charset>
+        </encoder>
+        <rollingPolicy class="ch.qos.logback.core.rolling.TimeBasedRollingPolicy">
+            <fileNamePattern>${logDictionary}/info-%d{yyyy-MM-dd}.%i.log</fileNamePattern>
+            <timeBasedFileNamingAndTriggeringPolicy class="ch.qos.logback.core.rolling.SizeAndTimeBasedFNATP">
+                <maxFileSize>3MB</maxFileSize>
+            </timeBasedFileNamingAndTriggeringPolicy>
+            <!--日志文件保留天数-->
+            <maxHistory>15</maxHistory>
+        </rollingPolicy>
+
+    </appender>
+    <root>
+        <appender-ref ref="outputConsole"/>
+        <!--<appender-ref ref="outputInfo"/>-->
+    </root>
+
+</configuration>
