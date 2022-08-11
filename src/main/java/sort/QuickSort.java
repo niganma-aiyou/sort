@@ -3,6 +3,8 @@ package sort;
  * 版权所有 2009-2022山东新北洋信息技术股份有限公司 保留所有权利。
  */
 
+import org.apache.logging.log4j.LogManager;
+import org.apache.logging.log4j.Logger;
 /**
  * 简单的说, 就是设置一个标准值, 将大于这个值的放到右边(不管排序), 将小于这个值的放到左边(不管排序), 那么这样只是区分了左小右大, 没有排序, 没关系, 左右两边再重复这个步骤.直到不能分了为止.
  * 详细说就是:
@@ -19,15 +21,16 @@ package sort;
  * @copyright 2022 山东新北洋信息技术股份有限公司. All rights reserved
  */
 public class QuickSort {
+
+    private static final Logger log = LogManager.getLogger(QuickSort.class.getName());
     public static void main(String[] args) {
         int[] arr = {48,62,35,77,55,14,36,98};
         int begin = 0;
         int end = arr.length-1;
         sort(arr,begin,end);
-        for (int i = 0 ; i < arr.length ; i++){
-            System.out.println(arr[i]);
+        for (int array : arr) {
+            log.info(array);
         }
-        System.out.println("\n");
     }
 
     public static void sort(int[] arr, int begin, int end) {

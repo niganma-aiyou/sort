@@ -4,8 +4,10 @@ package sort;
 
 import org.jetbrains.annotations.NotNull;
 
-import java.util.logging.LogManager;
-import java.util.logging.Logger;
+
+import org.apache.logging.log4j.LogManager;
+import org.apache.logging.log4j.Logger;
+
 
 import static sort.UniqueCode.LENGTH;
 
@@ -23,16 +25,15 @@ import static sort.UniqueCode.LENGTH;
  * @copyright 2022 山东新北洋信息技术股份有限公司. All rights reserved
  */
 public class InsertSort {
-    private static final Logger log = LogManager.getLogger(loginTestCase.class.getName());
+    private static final Logger log = LogManager.getLogger(InsertSort.class.getName());
 
     public static void main(String[] args) {
 
         int[] arr = {48,62,35,77,55,14,35,98};
         sort(arr);
         for (int array : arr) {
-
+            log.info(array);
         }
-        System.out.println("\n");
     }
     public static void sort(int @NotNull [] arr){
         if(arr.length >= LENGTH){
