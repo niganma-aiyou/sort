@@ -6,6 +6,8 @@ package api.collection.set;
 import org.apache.logging.log4j.LogManager;
 import org.apache.logging.log4j.Logger;
 
+import java.util.LinkedHashSet;
+
 /**
  * TODO
  * TODO
@@ -18,7 +20,15 @@ import org.apache.logging.log4j.Logger;
 public class LinkedHashSetTest {
     private static final Logger log = LogManager.getLogger(LinkedHashSetTest.class.getName());
 
+    //元素有序且不重复，与LinkedHashset相似
+
     public static void main(String[] args) {
-        log.info("");
+        LinkedHashSet<String> linkedHashSet = new LinkedHashSet<>();
+        linkedHashSet.add("taobao");
+        linkedHashSet.add("alibaba");
+        linkedHashSet.add("jingDong");
+
+        //先添加什么就先打印什么，先进先出（FIFO)first input first output
+        log.info(linkedHashSet);
     }
 }

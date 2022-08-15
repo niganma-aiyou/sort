@@ -40,10 +40,11 @@ public class ArrayListTest {
         list.set(0,"TTT");
         log.info(list.get(0));
 
-        /*Iterator<String> iterator = list.iterator();
-        while(iterator.hasNext()){
-            log.info(iterator.next());
-        }*/
+        //Iterator<String> iterator = list.iterator();
+        //while(iterator.hasNext()){
+          //  log.info(iterator.next());  使用迭代器进行遍历
+
+
         for (String ss : list
              ) {
             log.info(ss);

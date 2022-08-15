@@ -19,6 +19,8 @@ import org.apache.logging.log4j.Logger;
 public class TreeSetTest {
     private static final Logger log = LogManager.getLogger(TreeSetTest.class.getName());
 
+    //元素有序且不重复
+
     public static void main(String[] args) {
         log.info("");
     }
