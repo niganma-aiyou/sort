@@ -6,6 +6,8 @@ package api.map;
 import org.apache.logging.log4j.LogManager;
 import org.apache.logging.log4j.Logger;
 
+import java.util.HashMap;
+
 /**
  * TODO
  * TODO
@@ -19,6 +21,22 @@ public class HashMapTest {
     private static final Logger log = LogManager.getLogger(HashMapTest.class.getName());
 
     public static void main(String[] args) {
-        log.info("");
+        //16是默认值
+        HashMap<Integer,String> hashMap = new HashMap<>(16);
+        hashMap.put(1,"taobao");
+        hashMap.put(2,"alibaba");
+        hashMap.put(3,"jingdong");
+        log.info(hashMap);
+        log.info(hashMap.get(2));
+        hashMap.put(0,"hhh");
+        log.info(hashMap);
+        hashMap.remove(0);
+        log.info(hashMap);
+        log.info(hashMap.containsKey(2));
+        log.info(hashMap.containsValue("hhh"));
+        log.info(hashMap.entrySet());
+        log.info(hashMap.keySet());
+        hashMap.clear();
+        log.info(hashMap.isEmpty());
     }
 }
