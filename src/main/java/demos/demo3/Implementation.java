@@ -17,6 +17,8 @@ public class Implementation {
         Powder powder = new Powder();
         System.out.println(powder.checkResult());
 
+
+
         Powder powder1 = new Powder("牛肉面",3,false);
         System.out.println(powder1.checkResult());
         Powder powder2 = new Powder("排骨面",3);

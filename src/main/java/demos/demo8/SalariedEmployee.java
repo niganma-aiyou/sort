@@ -4,11 +4,10 @@
 package demos.demo8;
 
 /**
- * TODO
- * TODO
+ * TODO 月薪员工
  *
  * @author chuweiyuan
- * @module TODO
+ * @module 员工薪酬计算
  * @date 2022/8/17 8:35
  * @copyright 2022 山东新北洋信息技术股份有限公司. All rights reserved
  */
@@ -26,6 +25,7 @@ public class SalariedEmployee extends Employee{
 
     @Override
     public void getSalaryDetails(int month) {
-        System.out.println(month+"月，员工类型：月薪员工，"+getName()+"月收入为："+getMonthSalary()+"额外生日薪资为："+getSalary(month));
+        System.out.println(month+"月，员工类型：月薪员工，"+getName()+"月收入为："
+                +getMonthSalary()+"额外生日薪资为："+getSalary(month));
     }
 }

@@ -31,6 +31,7 @@ public class CollectionUtilsTest {
         list2.add("zhangsan");
         list2.add("lisi");
         log.info(CollectionUtils.isEmpty(list));
+
         log.info(CollectionUtils.isNotEmpty(list));
         //交集
         log.info(CollectionUtils.union(list2,list));
@@ -40,7 +41,7 @@ public class CollectionUtilsTest {
         log.info(CollectionUtils.subtract(list2,list));
         //判断集合是否相等
         log.info(CollectionUtils.isEqualCollection(list2,list));
-        //不可修改的集合
+        //不可修改的集
         Collection<String> list3 = CollectionUtils.unmodifiableCollection(list2);
         /*list3.add("huawei"); 不能添加代码，会报UnsupportedOperationException 基本不用*/
         log.info(list3);

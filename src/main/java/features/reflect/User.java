@@ -15,11 +15,12 @@ package features.reflect;
 public class User{
     // Field
     int no;
+    private String name;
+
 
     // Constructor
-    public User(){
 
-    }
+    public User(){}
     public User(int no){
         this.no = no;
     }
@@ -30,5 +31,13 @@ public class User{
     }
     public int getNo(){
         return no;
+    }
+
+    public String getName() {
+        return name;
+    }
+
+    public void setName(String name) {
+        this.name = name;
     }
 }

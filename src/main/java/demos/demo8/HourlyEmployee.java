@@ -7,11 +7,10 @@ package demos.demo8;
 import static demos.demo8.Constant.WORK_HOUR;
 
 /**
- * TODO
- * TODO
+ * 时薪员工的类
  *
  * @author chuweiyuan
- * @module TODO
+ * @module 计算员工薪酬
  * @date 2022/8/17 8:42
  * @copyright 2022 山东新北洋信息技术股份有限公司. All rights reserved
  */

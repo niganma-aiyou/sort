@@ -17,6 +17,7 @@ public class Powder {
     private Integer quantity;
     private Boolean likeSoup;
 
+
     public Powder(String name , int quantity, boolean likeSoup){
         this.name = name;
         this.quantity = quantity;

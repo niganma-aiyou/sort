@@ -6,11 +6,10 @@ package demos.demo8;
 
 
 /**
- * TODO
- * TODO
+ * TODO 基础工资的售卖员工类
  *
  * @author chuweiyuan
- * @module TODO
+ * @module 计算员工薪酬
  * @date 2022/8/17 8:58
  * @copyright 2022 山东新北洋信息技术股份有限公司. All rights reserved
  */
@@ -27,6 +26,7 @@ public class BasePlusSalesEmployee  extends SalesEmployee{
 
     @Override
     public void getSalaryDetails(int month) {
-        System.out.println(month+"月，员工类型：有底薪的销售员工，"+getName()+"的月收入为："+(getUpRate()*getMonthSales()+getBasicSalary())+"额外生日薪资为："+getSalary(month));
+        System.out.println(month+"月，员工类型：有底薪的销售员工，"+getName()+"的月收入为："
+                +(getUpRate()*getMonthSales()+getBasicSalary())+"额外生日薪资为："+getSalary(month));
     }
 }
